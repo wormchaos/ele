@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--<link rel="stylesheet" type="text/css" href="style.css" />-->
+    <style>
+        .shopmenu-food {
+            margin-bottom: 12px;
+            background-color: #fff;
+            border: 1px solid #eee;
+            padding: 10px;
+            width:25%;
+            float:left;
+
+        }
+
+        .shopmenu-food .name{
+            font-size: 20px;
+            background:#E5E5E5;
+            color:#323232;
+        }
+
+        .shopmenu-food .description{
+            font-size: 12px;
+        }
+        *, :after, :before {
+            box-sizing: inherit;
+        }
+        user agent stylesheetdiv {
+            display: block;
+        }
+        ul {list-style-type: none;}
+
+    </style>
+    <title></title>
+</head>
+<body>
+    <ul>
+        <div>
+            <div class="shopmenu-food">
+                初次访问，填写姓名！乱写名字的不发奶茶！
+                <form action="/add/" method="get">
+                   <input type="text" name="name">
+                    <input type="submit" value="提交">
+                </form>
+
+            </div>
+        </div>
+    </ul>
+</body>
+</html>

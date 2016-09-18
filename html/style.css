@@ -1,0 +1,20 @@
+.shopmenu-main.grid .shopmenu-food {
+    position: relative;
+    float: left;
+    margin-right: 2%;
+    padding-right: 10px;
+    width: 48%;
+}
+.shopmenu-food {
+    margin-bottom: 12px;
+    font-size: 12px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    height: 102px;
+}
+*, :after, :before {
+    box-sizing: inherit;
+}
+user agent stylesheetdiv {
+    display: block;
+}

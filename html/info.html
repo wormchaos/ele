@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--<link rel="stylesheet" type="text/css" href="style.css" />-->
+    <style>
+        .shopmenu-food {
+            margin-bottom: 12px;
+            background-color: #fff;
+            border: 1px solid #eee;
+            padding: 10px;
+            width:25%;
+            float:left;
+
+        }
+
+        .shopmenu-food .name{
+            font-size: 20px;
+            background:#E5E5E5;
+            color:#323232;
+        }
+
+        .shopmenu-food .description{
+            font-size: 12px;
+        }
+        *, :after, :before {
+            box-sizing: inherit;
+        }
+        user agent stylesheetdiv {
+            display: block;
+        }
+        ul {list-style-type: none;}
+
+    </style>
+    <title></title>
+</head>
+<body>
+    <ul>
+        {% for food in foods %}
+        <li>
+            <form action="/order/" method="get">
+                <div>
+                    <div class="shopmenu-food" ca_id = "{{ food.category_id }}">
+                        <div class="name">{{ food.name }}</div>
+                        <img src="{{ food.img }}"/>
+                        <div class="desc">{{ food.description }}</div>
+                        <input name="id" type="hidden" value="{{ food.category_id }}"/>
+                        <input name="name" type="hidden" value="{{ food.name }}"/>
+                        <input type="submit" value="要这个">
+                    </div>
+
+                </div>
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

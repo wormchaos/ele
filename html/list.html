@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--<link rel="stylesheet" type="text/css" href="style.css" />-->
+    <style>
+        div {
+            margin-bottom: 12px;
+            background-color: #fff;
+            border: 1px solid #eee;
+            padding: 10px;
+            width:25%;
+
+        }
+    </style>
+    <title></title>
+</head>
+<body>
+    <div>
+        <form action="/item/" method="get">
+            <input type="submit" value="返回重选"/>
+        </form>
+        <form action="/add/" method="get">
+            <label><b>我是傻逼！我乱填名字！我错了！我要改名字，新名字:</b></label>
+            <input name="name" type="text" value="{{ name }}"/>
+            <input type="submit" value="去人修改"/>
+        </form>
+    </div>
+    <div>下单列表</div>
+    <ul>
+        {% for user in orderList %}
+        <li>
+            <div>{{ user.name }} : {{ user.food }} * 1</div>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
